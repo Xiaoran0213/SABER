@@ -1,7 +1,6 @@
 # SABER
 
-**S**equence-informed **A**utoencoder with **B**ilinear decoding for **E**xpression
-imputation and **R**epresentation learning in single-cell proteomics.
+SABER: sequence-anchored bilinear expression reconstruction for imputing and expanding mass-spectrometry single-cell proteomes
 
 SABER reconstructs each protein abundance as a bilinear interaction between a
 learned cell state and a protein embedding derived from ESM-2. One fitted model
