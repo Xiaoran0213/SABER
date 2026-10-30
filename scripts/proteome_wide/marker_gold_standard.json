@@ -1,0 +1,31 @@
+{
+  "_doc": "Hand-curated cell-type marker gold standard (human UniProt accessions) for the proteome-wide biological-coherence check. These are canonical, lineage-defining markers used only as a CONFIRMATORY directional check; the primary evidence is the unbiased GO BP / Reactome over-representation analysis. Each set is intentionally conservative (high-confidence markers). recall = |gold intersect method_topN| / |gold intersect heldout_proteins|. sc_u is U-937 (monocyte), so it shares the monocyte set.",
+  "_sources": "UniProt (reviewed, human). Markers chosen from standard cell-lineage immunophenotyping literature: melanosome/pigmentation ( melanoma ), ductal cytokeratins/CEA/MUC1 ( PDAC ), CD14/LYZ/MPO/CD11b ( monocyte/U-937 ), CD68/CD163/MRC1 ( macrophage ).",
+  "cell_types": {
+    "Melanoma": {
+      "lineage": "melanocyte / melanosome",
+      "markers": ["P11511", "P17643", "P40126", "P40167", "Q16654", "Q04671", "Q1NYC6", "P30040", "P51159", "Q9Y2I5", "Q9H078", "Q9NQG7"],
+      "marker_names": ["TYR", "TYRP1", "DCT", "PMEL", "MLANA", "OCA2", "SLC45A2", "GPR143", "RAB27A", "MYO5A", "MGRN1", "HPS4"]
+    },
+    "PDAC": {
+      "lineage": "pancreatic ductal adenocarcinoma / ductal epithelial",
+      "markers": ["P08727", "P08729", "P05787", "P05783", "P15941", "P06731", "P40199", "P16422", "O14493", "P25815", "O95994", "Q9HC84"],
+      "marker_names": ["KRT19", "KRT7", "KRT8", "KRT18", "MUC1", "CEACAM5", "CEACAM6", "EPCAM", "CLDN4", "S100P", "AGR2", "MUC5AC"]
+    },
+    "U-937": {
+      "lineage": "monocyte (human monocytic leukemia line)",
+      "markers": ["P08571", "P61626", "P05164", "P07333", "P11215", "P20138", "P05109", "P06702", "P25774", "P08613", "O15388", "P08637"],
+      "marker_names": ["CD14", "LYZ", "MPO", "CSF1R", "ITGAM/CD11b", "CD33", "S100A8", "S100A9", "CTSS", "VCAN", "FCN1", "FCGR3A/CD16"]
+    },
+    "sc_u": {
+      "lineage": "monocyte (U-937 in Specht_2019)",
+      "markers": ["P08571", "P61626", "P05164", "P07333", "P11215", "P20138", "P05109", "P06702", "P25774", "P08613", "O15388", "P08637"],
+      "marker_names": ["CD14", "LYZ", "MPO", "CSF1R", "ITGAM/CD11b", "CD33", "S100A8", "S100A9", "CTSS", "VCAN", "FCN1", "FCGR3A/CD16"]
+    },
+    "sc_m0": {
+      "lineage": "macrophage (M0, monocyte-derived)",
+      "markers": ["P34810", "Q9H5V8", "P22897", "P07333", "P02649", "P61626", "Q2TU84", "P55008", "P02745", "P02746", "P08571", "P07339"],
+      "marker_names": ["CD68", "CD163", "MRC1/CD206", "CSF1R", "APOE", "LYZ", "MARCO", "AIF1/Iba1", "C1QA", "C1QB", "CD14", "CTSD"]
+    }
+  }
+}

@@ -1,0 +1,40 @@
+project:
+  name: easyscp_cellembed_noplm
+  outdir: outputs/easyscp_cellembed_noplm
+  seed: 42
+data:
+  synthetic: false
+  path: ${SABER_DATA_ROOT}/easyscp_liver/prepared/EasySCP_liver.h5ad
+  protein_features_path: ""
+  batch_key: batch
+  cell_type_key: cell_type
+  scale_mode: zscore
+  allow_random_protein_features: true
+missing:
+  enabled: true
+  total_fraction: 0.50
+  mnar_fraction: 0.50
+  threshold_quantile: 0.10
+  threshold_scale: 0.30
+  seed: 42
+model:
+  latent_dim: 16
+  ae_h1: 128
+  ae_h2: 64
+  protein_feature_dim: 1280
+  protein_proj_dim: 256
+  protein_proj_hidden_dim: 256
+  protein_proj_dropout: 0.10
+  bilinear_with_w: true
+  trainable_protein_features: false
+training:
+  epochs: 300
+  batch_size: 32
+  lr: 0.0005
+  weight_decay: 0.01
+  val_frac: 0.05
+  device: auto
+  lr_mult_protein_features: 1.0
+  lr_mult_protein_encoder: 1.0
+evaluation:
+  imputation: true

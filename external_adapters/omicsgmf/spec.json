@@ -1,0 +1,12 @@
+{
+  "conda_env": "r_omicsgmf",
+  "adapter_type": "R",
+  "method_type": "imputation",
+  "dependencies": {
+    "conda_channels": ["conda-forge", "bioconda", "defaults"],
+    "conda_packages": ["r-base=4.2", "r-devtools"],
+    "install_from_source": "$SABER_EXTERNAL_REPOS/omicsgmf"
+  },
+  "notes": "OmicsGMF: Gaussian mixture factorization for omics data imputation. Install from the upstream clone under $SABER_EXTERNAL_REPOS (see README.md)."
+}
+

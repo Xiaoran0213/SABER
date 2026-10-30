@@ -1,0 +1,45 @@
+project:
+  name: saber_expansion
+  outdir: outputs/expansion
+  seed: 42
+
+data:
+  path: ${SABER_DATA_ROOT}/anndata/Derks_2022_3ct.h5ad
+  protein_features_path: ${SABER_PLM_ROOT}/esm2_650m/Derks_2022_3ct_embeddings.npy
+  protein_features_ids_path: ${SABER_PLM_ROOT}/esm2_650m/Derks_2022_3ct_protein_ids.npy
+  batch_key: batch
+  cell_type_key: cell_type
+  scale_mode: none
+  allow_random_protein_features: false
+
+missing:
+  enabled: false
+
+model:
+  latent_dim: 16
+  ae_h1: 128
+  ae_h2: 64
+  protein_feature_dim: 1280
+  protein_proj_dim: 256
+  protein_proj_hidden_dim: 256
+  protein_proj_dropout: 0.10
+  bilinear_with_w: true
+  trainable_protein_features: false
+
+training:
+  epochs: 300
+  batch_size: 32
+  lr: 0.0005
+  weight_decay: 0.01
+  val_frac: 0.05
+  device: auto
+
+evaluation:
+  imputation: false
+
+expansion:
+  target_fraction: 0.10
+  seed: 42
+  min_target_observed: 0
+  references: [plm_ridge, plm_knn]
+  holdout_mode: random

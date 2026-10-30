@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+outputs/
+.venv/
+.env
+.vscode/
+.idea/
+.DS_Store
+*.log
+.saber_env
+/figures/
+.cache/
+# local run artifacts inside the bundled adapters (training curves, logs, models)
+external_adapters/**/logs/
+external_adapters/**/models/
+external_adapters/**/*.pkl
+external_adapters/pimms/dae_training.*

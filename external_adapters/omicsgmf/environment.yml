@@ -1,0 +1,23 @@
+name: r_omicsgmf
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - r-base=4.2
+  - r-devtools
+  - r-remotes
+  - r-matrix
+  - r-mass
+  - r-ggplot2
+  - bioconductor-singlecellexperiment
+  - bioconductor-scuttle
+  - bioconductor-scater
+  - bioconductor-qfeatures
+  - bioconductor-summarizedexperiment
+  - bioconductor-delayedarray
+  - bioconductor-matrixgenerics
+  - bioconductor-biocsingular
+  - bioconductor-biocparallel
+  - bioconductor-beachmat
+  - bioconductor-biobase

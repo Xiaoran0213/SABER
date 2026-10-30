@@ -1,0 +1,15 @@
+name: scPROTEIN
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+    - numpy==1.26.4
+    - pandas==2.3.0
+    - scipy==1.13.1
+    - scikit-learn==1.6.1
+    - scanpy==1.10.3
+    - torch==2.7.1
+    - scprotein==1.1.1

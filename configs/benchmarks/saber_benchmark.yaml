@@ -1,0 +1,89 @@
+paths:
+  data_root: ${SABER_DATA_ROOT}
+  benchmark_root: ${SABER_BENCHMARK_ROOT}
+  protae_root: ${SABER_PROTAE_ROOT}
+
+datasets:
+  - dataset: Specht_2019
+    source_path: "{data_root}/anndata/Specht_2019.h5ad"
+    target_name: Specht_2019.h5ad
+    batch_key: batch_combined
+    cell_type_key: cell_type
+    species_hint: human
+    scale_mode: none
+    task_families: [imputation, cell_embedding, protein_embedding, proteome_expansion]
+
+  - dataset: Derks_2022
+    source_path: "{data_root}/anndata/Derks_2022_3ct.h5ad"
+    target_name: Derks_2022.h5ad
+    batch_key: batch
+    cell_type_key: cell_type
+    species_hint: human
+    scale_mode: none
+    task_families: [imputation, cell_embedding, protein_embedding, proteome_expansion]
+
+  - dataset: Huffman_2023_melanoma_HEK
+    source_path: "{data_root}/anndata/filtered_plm/Huffman_2023_melanoma_HEK_plmfiltered.h5ad"
+    target_name: Huffman_2023_melanoma_HEK.h5ad
+    batch_key: batch
+    cell_type_key: cell_type
+    species_hint: human
+    scale_mode: none
+    task_families: [imputation, proteome_expansion]
+
+  - dataset: Woo_2021
+    source_path: "{data_root}/anndata/filtered_plm/Woo_2021_plmfiltered.h5ad"
+    target_name: Woo_2021.h5ad
+    batch_key: batch
+    cell_type_key: cell_type
+    species_hint: mouse
+    scale_mode: zscore
+    task_families: [imputation, proteome_expansion]
+
+  - dataset: EasySCP_liver
+    source_path: "{data_root}/anndata/EasySCP_liver.h5ad"
+    target_name: EasySCP_liver.h5ad
+    batch_key: batch
+    cell_type_key: cell_type
+    species_hint: mouse
+    scale_mode: zscore
+    task_families: [imputation, proteome_expansion]
+    note: Liver-zonation case study (PXD070185). Fig. 2 and Fig. 5a-d.
+
+  - dataset: Brunner_2022
+    source_path: "{data_root}/anndata/Brunner_2022.h5ad"
+    target_name: Brunner_2022.h5ad
+    batch_key: batch
+    cell_type_key: cell_type
+    species_hint: human
+    scale_mode: zscore
+    task_families: [imputation]
+    note: Cell-cycle case study (PXD024043). Fig. 5e-h.
+
+  - dataset: PXD071205_LFQ
+    source_path: "{data_root}/anndata/PXD071205_LFQ_Benchmark.h5ad"
+    target_name: PXD071205_LFQ.h5ad
+    batch_key: condition
+    cell_type_key: condition
+    species_hint: mixed
+    scale_mode: zscore
+    task_families: [lfq]
+
+external_annotations:
+  - dataset: Specht_2019
+    source_dir: "{protae_root}/outputs/paper_benchmark_20260414/Specht_2019_missing50pct_protae4_plm_benchmark/evaluation/protein_embedding/external"
+    target_dir: "{benchmark_root}/external_annotations/Specht_2019"
+    filenames:
+      - string_interactions.csv
+      - reactome_pathways.json
+      - go_annotations.json
+      - annotation_summary.json
+
+  - dataset: Derks_2022
+    source_dir: "{protae_root}/outputs/paper_benchmark_20260414/Derks_2022_3ct_missing50pct_protae4_plm_benchmark/evaluation/protein_embedding/external"
+    target_dir: "{benchmark_root}/external_annotations/Derks_2022"
+    filenames:
+      - string_interactions.csv
+      - reactome_pathways.json
+      - go_annotations.json
+      - annotation_summary.json

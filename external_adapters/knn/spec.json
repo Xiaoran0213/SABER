@@ -1,0 +1,12 @@
+{
+  "conda_env": "saber",
+  "adapter_type": "python",
+  "method_type": "imputation",
+  "k": 5,
+  "dependencies": {
+    "conda_channels": ["conda-forge", "defaults"],
+    "conda_packages": ["python=3.10", "numpy"],
+    "pip_packages": []
+  },
+  "notes": "Classic protein-wise k-nearest-neighbour imputation (k=5, Pearson similarity). Task-agnostic: imputes whatever NaN mask SABER's manifest runner applies (injected missing for imputation, natural missing for LFQ raw-scale)."
+}

@@ -1,0 +1,12 @@
+{
+  "conda_env": "pimms",
+  "adapter_type": "python",
+  "method_type": "imputation",
+  "dependencies": {
+    "conda_channels": ["conda-forge", "defaults"],
+    "conda_packages": ["python=3.9", "numpy", "pandas", "scikit-learn"],
+    "pip_packages": ["torch", "pimms-learn"]
+  },
+  "notes": "PIMMS (Proteomics IMputation Modeling System) supports DAE, VAE, and CF models"
+}
+

@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "saber-ms"
+version = "0.1.0"
+description = "SABER: prior-informed bilinear modeling for single-cell proteomics"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+  {name = "SABER authors"}
+]
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "pyyaml>=6.0",
+  "torch>=2.0",
+  "anndata>=0.10",
+  "scipy>=1.10",
+  "scikit-learn>=1.3",
+  "matplotlib>=3.7",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0",
+]
+# Needed only by the UMAP panels (Fig. 5d and expression maps).
+figures = [
+  "umap-learn>=0.5",
+]
+
+[project.scripts]
+saber = "saber.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["saber*"]
+exclude = ["legacy*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+norecursedirs = ["legacy", ".git", ".pytest_cache"]

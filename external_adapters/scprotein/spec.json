@@ -1,0 +1,6 @@
+{
+  "conda_env": "scPROTEIN",
+  "adapter_type": "python",
+  "method_type": "embedding",
+  "notes": "scPROTEIN embedding adapter wrapper"
+}
