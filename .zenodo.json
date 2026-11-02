@@ -1,0 +1,19 @@
+{
+  "title": "SABER: sequence-informed autoencoder with bilinear decoding for single-cell proteomics",
+  "creators": [
+    {
+      "name": "Yu, Xiaoran",
+      "affiliation": "Department of Statistics and Data Science, The Chinese University of Hong Kong"
+    }
+  ],
+  "description": "Implementation, reproduction pipeline, and evaluation tables for the SABER manuscript. SABER reconstructs each protein abundance as a bilinear interaction between a learned cell state and a protein embedding derived from ESM-2, unifying missing-value imputation, representation learning, and zero-shot prediction of held-out proteins in mass-spectrometry single-cell proteomics. The repository ships the collected evaluation tables (figures regenerate without training) plus the full campaign scripts, case-study chains, and external-baseline adapters.",
+  "license": "MIT",
+  "keywords": [
+    "single-cell proteomics",
+    "mass spectrometry",
+    "protein language models",
+    "ESM-2",
+    "missing-value imputation",
+    "proteome expansion"
+  ]
+}
