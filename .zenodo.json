@@ -1,5 +1,5 @@
 {
-  "title": "SABER: sequence-informed autoencoder with bilinear decoding for single-cell proteomics",
+  "title": "SABER: sequence-anchored bilinear expression reconstruction for imputing and expanding mass-spectrometry single-cell proteomes",
   "creators": [
     {
       "name": "Yu, Xiaoran",
