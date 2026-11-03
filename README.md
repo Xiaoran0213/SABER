@@ -20,8 +20,11 @@ pip install -e ".[dev,figures]"
 ## Configure the data roots
 
 Processed matrices, ESM-2 caches, and run outputs are not stored in this
-repository. Copy `env.example` to `.saber_env` (auto-loaded, gitignored) or
-export the variables:
+repository. The archived bundle containing all of them (benchmark slice,
+both case studies, precomputed PLM caches) is available at
+https://doi.org/10.5281/zenodo.23805670 — download, extract, and point the
+roots below at it. Copy `env.example` to `.saber_env` (auto-loaded,
+gitignored) or export the variables:
 
 ```bash
 export SABER_DATA_ROOT=/path/to/proteomics
