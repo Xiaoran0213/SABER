@@ -49,7 +49,19 @@ map.
 
 ## Train
 
+The templates read aligned inputs from a one-time preparation step (the raw
+benchmark matrices contain two Derks proteins without a sequence in the
+UniProt reference proteome, and duplicate IDs on some datasets):
+
 ```bash
+saber prepare-aligned-inputs \
+    --data-path $SABER_DATA_ROOT/saber_benchmark/anndata/Derks_2022.h5ad \
+    --cache $SABER_PLM_ROOT/esm2_650m/Derks_2022_3ct_embeddings.npy \
+    --cache-protein-ids $SABER_PLM_ROOT/esm2_650m/Derks_2022_3ct_protein_ids.npy \
+    --outdir outputs/prepared/Derks_2022 --name Derks_2022 \
+    --duplicate-cache-policy first --duplicate-dataset-policy first \
+    --drop-missing-proteins
+
 saber train --config configs/templates/imputation_base.yaml
 saber train-expansion --config configs/templates/expansion_base.yaml
 ```

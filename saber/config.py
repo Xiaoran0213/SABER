@@ -143,13 +143,14 @@ _SECTION_KEYS: dict[str, set[str]] = {
 
 
 def _known_roots() -> dict[str, str]:
-    from .paths import benchmark_root, data_root, plm_root
+    from .paths import benchmark_root, data_root, outputs_root, plm_root
 
     roots: dict[str, str] = {}
     for key, getter in (
         ("SABER_DATA_ROOT", data_root),
         ("SABER_PLM_ROOT", plm_root),
         ("SABER_BENCHMARK_ROOT", benchmark_root),
+        ("SABER_OUTPUTS_ROOT", outputs_root),
     ):
         env = os.environ.get(key, "").strip()
         if env:

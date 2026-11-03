@@ -44,6 +44,14 @@ Notes:
 
 ## Tier 2 — full campaigns
 
+The campaign drivers below (`run_all.py`, `submit_farm.py`) materialize SLURM
+farms and assume a scheduler. On a single machine without SLURM, train
+single configs directly instead — the templates under `configs/templates/`
+resolve against the archived data package as-is (`saber train --config
+configs/templates/imputation_base.yaml`; lower `training.epochs` for a
+quick run), and the case-study chains under `scripts/case_study/` are
+plain Python scripts.
+
 ### 0. Data + caches
 
 ```bash
